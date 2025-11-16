@@ -15,6 +15,7 @@ function DictionaryContent() {
     <div className="min-h-screen bg-background text-foreground transition-colors">
       <div className="max-w-5xl mx-auto px-4">
         <Navbar />
+
         <div className="mt-8 md:mt-12">
           <SearchBar onSearch={searchWord} />
         </div>

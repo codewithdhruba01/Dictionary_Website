@@ -16,8 +16,11 @@ export function MeaningCard({ data }: MeaningCardProps) {
 
   const playAudio = () => {
     if (audioUrl) {
-      const audio = new Audio(audioUrl);
+      const audio = new Audio();
+      audio.src = audioUrl;
+      audio.load();
       setIsPlaying(true);
+
       audio.play();
       audio.onended = () => setIsPlaying(false);
     }
@@ -25,9 +28,9 @@ export function MeaningCard({ data }: MeaningCardProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       className="w-full max-w-3xl mx-auto mt-8 sm:mt-10 md:mt-12 space-y-6 sm:space-y-8"
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
@@ -37,6 +40,7 @@ export function MeaningCard({ data }: MeaningCardProps) {
             <p className="text-base sm:text-lg md:text-xl text-[#A445ED]">{data.phonetic}</p>
           )}
         </div>
+
         {audioUrl && (
           <button
             onClick={playAudio}
@@ -51,9 +55,9 @@ export function MeaningCard({ data }: MeaningCardProps) {
       {data.meanings.map((meaning, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          initial={false}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: index * 0.05 }}
           className="space-y-6"
         >
           <div className="flex items-center gap-3 sm:gap-4">
@@ -70,6 +74,7 @@ export function MeaningCard({ data }: MeaningCardProps) {
                 <li key={defIndex} className="relative">
                   <span className="absolute -left-4 sm:-left-6 text-[#A445ED]">•</span>
                   <p className="text-sm sm:text-base text-foreground">{def.definition}</p>
+
                   {def.example && (
                     <p className="mt-2 text-sm sm:text-base text-muted-foreground italic">
                       "{def.example}"

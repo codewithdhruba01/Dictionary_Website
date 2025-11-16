@@ -35,18 +35,14 @@ export function useDictionary() {
   const [error, setError] = useState<string | null>(null);
 
   const searchWord = async (word: string) => {
-    if (!word.trim()) {
-      setData(null);
-      setError(null);
-      return;
-    }
+    if (!word.trim()) return;
 
     setLoading(true);
     setError(null);
 
     try {
       const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word.trim()}`
+        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
       );
 
       if (!response.ok) {
@@ -61,12 +57,13 @@ export function useDictionary() {
 
       const result = await response.json();
       setData(result[0]);
-      setError(null);
     } catch (err) {
       setError('Network error. Please check your connection.');
       setData(null);
     } finally {
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 600); // smooth loader
     }
   };
 
