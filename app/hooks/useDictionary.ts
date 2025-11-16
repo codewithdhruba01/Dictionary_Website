@@ -41,9 +41,7 @@ export function useDictionary() {
     setError(null);
 
     try {
-      const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-      );
+      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
 
       if (!response.ok) {
         if (response.status === 404) {
@@ -63,7 +61,7 @@ export function useDictionary() {
     } finally {
       setTimeout(() => {
         setLoading(false);
-      }, 600); // smooth loader
+      }, 600);
     }
   };
 
