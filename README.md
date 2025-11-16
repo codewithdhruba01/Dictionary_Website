@@ -166,13 +166,29 @@ Potential improvements:
 - Custom theme colors
 - Pronunciation practice mode
 
-## License
-
-Open source project - feel free to use and modify.
-
 ## Credits
 
 - **Dictionary API**: [dictionaryapi.dev](https://dictionaryapi.dev)
 - **UI Library**: [shadcn/ui](https://ui.shadcn.com)
 - **Icons**: [Lucide React](https://lucide.dev)
 - **Animations**: [Framer Motion](https://www.framer.com/motion)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+<div align="center">
+   
+⭐ If you find this project useful, please give it a star!
+
+**Built with ❤️ by Dhrubaraj Pati for developers**
+
+[Website](https://codewithdhruba.vercel.app/) • [GitHub](https://github.com/codewithdhruba01) • [Twitter](https://x.com/codewithdhruba)
+
+</div>
