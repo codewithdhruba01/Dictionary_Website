@@ -95,11 +95,6 @@ app/
 3. The entire app font changes instantly
 4. Your selection is saved automatically
 
-### Toggling Dark/Light Mode
-1. Click the theme toggle switch in the navbar (right side)
-2. The icon changes between Sun (light) and Moon (dark)
-3. Smooth transition to the new theme
-4. Your preference is saved automatically
 
 ### Listening to Pronunciation
 1. Search for a word that has audio pronunciation
@@ -114,16 +109,6 @@ The search bar implements a 500ms debounce to:
 - Improve performance
 - Provide smooth user experience while typing
 
-### Theme Persistence
-- Theme preference is saved to localStorage
-- Font selection is saved to localStorage
-- Settings persist across browser sessions
-
-### Responsive Breakpoints
-- **Mobile (xs)**: 320px and up
-- **Small (sm)**: 640px and up
-- **Medium (md)**: 768px and up
-- **Large (lg)**: 1024px and up
 
 All components scale appropriately at each breakpoint.
 
@@ -135,27 +120,6 @@ The app handles:
 - Invalid requests
 
 Each error displays a user-friendly message with proper styling.
-
-### Loading States
-- Animated spinning loader with purple accent color
-- Shows while fetching from Dictionary API
-- Smooth fade-in/fade-out transitions
-
-## Color Scheme
-
-### Light Mode
-- Background: White (#FFFFFF)
-- Foreground: Dark Gray (#1A1A1A)
-- Secondary: Light Gray (#F5F5F5)
-- Accent: Purple (#A445ED)
-
-### Dark Mode
-- Background: Dark Gray (#121212)
-- Foreground: White (#FFFFFF)
-- Secondary: Charcoal (#1F1F1F)
-- Accent: Purple (#A445ED)
-
-The purple accent color (#A445ED) is consistent across both themes for the search icon, play button, synonyms, and toggle switch.
 
 ## API Reference
 
@@ -175,33 +139,6 @@ The app uses the free, open-source Dictionary API.
 
 No API key required.
 
-## Browser Support
-
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance Optimizations
-
-1. **Debounced Search**: Reduces API calls while typing
-2. **Code Splitting**: Next.js automatically splits code by route
-3. **Image Optimization**: Next.js Image component for any future images
-4. **CSS-in-JS**: Tailwind CSS provides optimized styling
-5. **Server-Side Rendering**: Initial page load is optimized
-6. **Caching**: Browser caches API responses
-
-## Accessibility Features
-
-- Semantic HTML structure
-- Proper color contrast ratios
-- Keyboard navigation support
-- Screen reader friendly
-- Focus indicators on interactive elements
-- ARIA labels where appropriate
-
-## Build & Deployment
-
 ### Build for Production
 ```bash
 npm run build
@@ -210,40 +147,6 @@ npm start
 
 ### Environment Variables
 No environment variables required for basic functionality. All APIs are public.
-
-### Deployment Options
-- **Vercel**: Recommended (one-click deploy from GitHub)
-- **Netlify**: Supported with `npm run build`
-- **Docker**: Can be containerized with Node.js base image
-- **Traditional Hosting**: Build locally and upload build folder
-
-## Troubleshooting
-
-### Word Not Found
-- Check spelling of the word
-- Try a different word
-- Some words may not be in the dictionary database
-
-### No Audio Available
-- Not all words have pronunciation audio
-- Audio availability depends on the Dictionary API database
-- Try another word to test audio functionality
-
-### Search Not Working
-- Check internet connection
-- Ensure Dictionary API is accessible
-- Try refreshing the page
-- Check browser console for errors
-
-### Font Changes Not Saving
-- Check if localStorage is enabled in browser
-- Clear browser cache and try again
-- Ensure cookies/storage are not blocked
-
-### Dark Mode Not Working
-- Verify JavaScript is enabled
-- Clear browser cache
-- Try in an incognito/private window
 
 ## Known Limitations
 
@@ -273,6 +176,3 @@ Open source project - feel free to use and modify.
 - **UI Library**: [shadcn/ui](https://ui.shadcn.com)
 - **Icons**: [Lucide React](https://lucide.dev)
 - **Animations**: [Framer Motion](https://www.framer.com/motion)
-#   - D i c t i o n a r y _ W e b s i t e  
- #   D i c t i o n a r y _ W e b s i t e  
- 
