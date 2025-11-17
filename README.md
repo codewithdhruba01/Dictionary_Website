@@ -1,5 +1,7 @@
 # Dictionary Web App
 
+![Banner](public/Dictionary-cover.png)
+
 A modern, fully-featured Dictionary Web Application built with Next.js 14, React, TypeScript, and Tailwind CSS. Search for any English word and get detailed definitions, pronunciations, examples, synonyms, and more.
 
 ## Features
