@@ -66,9 +66,10 @@ app/
 
 ### Installation Steps
 
-1. **Clone or navigate to the project directory**
-   ```bash
-   cd /path/to/project
+1. Clone the repository:
+    ```bash
+   git clone https://github.com/codewithdhruba01/Dictionary_Website.git
+   cd Dictionary_Website
    ```
 
 2. **Install dependencies**
